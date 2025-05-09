@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weed ni Tito - Download</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        
+
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            background-image: 
+                radial-gradient(circle at 100% 150%, #f0f0f0 24%, #ffffff 24%, #ffffff 28%, #f0f0f0 28%, #f0f0f0 36%, #ffffff 36%, #ffffff 40%, transparent 40%, transparent),
+                radial-gradient(circle at 0    150%, #f0f0f0 24%, #ffffff 24%, #ffffff 28%, #f0f0f0 28%, #f0f0f0 36%, #ffffff 36%, #ffffff 40%, transparent 40%, transparent),
+                radial-gradient(circle at 50%  100%, #ffffff 10%, #f0f0f0 10%, #f0f0f0 23%, #ffffff 23%, #ffffff 30%, #f0f0f0 30%, #f0f0f0 43%, #ffffff 43%, #ffffff 50%, #f0f0f0 50%, #f0f0f0 63%, #ffffff 63%, #ffffff 71%, transparent 71%, transparent),
+                radial-gradient(circle at 100% 50%, #ffffff 5%, #f0f0f0 5%, #f0f0f0 15%, #ffffff 15%, #ffffff 20%, #f0f0f0 20%, #f0f0f0 29%, #ffffff 29%, #ffffff 34%, #f0f0f0 34%, #f0f0f0 44%, #ffffff 44%, #ffffff 49%, transparent 49%, transparent),
+                radial-gradient(circle at 0    50%, #ffffff 5%, #f0f0f0 5%, #f0f0f0 15%, #ffffff 15%, #ffffff 20%, #f0f0f0 20%, #f0f0f0 29%, #ffffff 29%, #ffffff 34%, #f0f0f0 34%, #f0f0f0 44%, #ffffff 44%, #ffffff 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            flex: 0 0 auto;
+        }
+
+        .logo img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        .nav-button {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-button:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            nav ul li {
+                margin: 5px;
+            }
+
+            .nav-button {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Centered square container */
+        .center-square {
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 2px solid #333;
+            border-radius: 15px;
+            width: 400px;
+            max-width: 90vw;
+            padding: 30px 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .center-square p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #032B44;
+            font-weight: 600;
+        }
+
+        .download-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 2px solid #ddd;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo-placeholder.jpg" alt="Weed ni Tito Logo" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-button">Home</a></li>
+                    <li><a href="index.html#food-menu" class="nav-button">Food Menu</a></li>
+                    <li><a href="cartpage.html" class="nav-button">Cart</a></li>
+                    <li><a href="aboutus.html" class="nav-button">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="center-square">
+            <p>Want to try our mobile version of our webpage? Click the download button below</p>
+<a href="/com.companyname.weednititoapp.apk" class="download-button" download>Download Here</a>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Weed ni Tito</p>
+    </footer>
+</body>
+</html>
